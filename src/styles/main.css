@@ -1,2 +1,7 @@
 @reset-global pc;
 
+html, body {
+  size: 100%;
+  color: #FFF;
+  background: #0F1217 url("/bg.jpg");
+}
