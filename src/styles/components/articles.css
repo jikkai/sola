@@ -1,0 +1,14 @@
+@import "../var.css";
+
+@component-namespace vows {
+  @c articles {
+    position: relative;
+    top: 100%;
+    max-width: 800px;
+    margin: auto;
+    color: var(--black) var(--white);
+    border-radius: 6px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+}

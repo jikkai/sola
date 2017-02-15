@@ -1,0 +1,11 @@
+@import "./var.css";
+
+@reset-global pc;
+
+html, body {
+  size: 100%;
+  color: var(--white);
+  font-family: var(--sans-serif);
+  background: #0F1217 url("/bg.jpg") no-repeat fixed;
+  background-size: cover;
+}
