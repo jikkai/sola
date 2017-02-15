@@ -2,11 +2,14 @@
     <div>
       <p>
         <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-        &copy; 2014 - 2017
+        &copy; {{ if .Site.Params.since }}{{ .Site.Params.since }} - {{ end }}{{ .Now.Year }}
       </p>
       <p>
         Powered by 
         <a href="https://gohugo.io/" target="_blank">Hugo</a>. 
+        <a href="https://github.com/jikkai/vows" target="_blank">Vows</a>
+        Theme By
+        <a href="https://asaki.me" target="_blank">Jikkai Xiao</a>
       </p>
     </div>
   </footer>

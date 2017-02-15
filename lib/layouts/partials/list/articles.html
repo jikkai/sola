@@ -2,9 +2,9 @@
   <section class="vows-articles__list">
     {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
     {{ range $paginator.Pages }}
-    <article class="vows-articles__list--item">
-      <header>
-        <h2>
+    <article class="vows-article">
+      <header class="vows-article__header">
+        <h2 class="vows-article__header--title">
           <a href="{{ .Permalink }}">{{ .Title }}</a>
         </h2>
         <div>
@@ -12,12 +12,13 @@
           <span>{{ .Params.categories }}</span>
         </div>
       </header>
-      <p>
+      <p class="vows-article__content">
         {{ if eq .Description "" }}
           {{ .Summary }}
         {{ else }}
           {{ .Description }}
         {{ end }}
+        ...
       </p>
       <p>
         <a href="{{ .Permalink }}">继续阅读</a>

@@ -7,8 +7,22 @@
     box-sizing: border-box;
 
     @d list {
+      max-width: 800px;
+      margin: auto;
+    }
+  }
 
-      @m item {
+  @c article {
+    padding: 2rem 0;
+
+    @d header {
+      @m title {
+        text-align: center;
+        font-size: 1.25rem;
+
+        & a {
+          color: var(--light-black);
+        }
       }
     }
   }
