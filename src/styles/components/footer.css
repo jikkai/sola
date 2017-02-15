@@ -2,10 +2,14 @@
 
 @component-namespace vows {
   @c footer {
-    position: relative;
-    top: var(--top);
-    size: 100% 64px;
+    size: 100% 72px;
     text-align: center;
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & a {
+      color: var(--white);
+    }
   }
 }
