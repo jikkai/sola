@@ -9,3 +9,7 @@ html, body {
   background: #0F1217 url("/bg.jpg") no-repeat fixed;
   background-size: cover;
 }
+
+a {
+  text-decoration: none;
+}

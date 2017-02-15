@@ -3,7 +3,7 @@
 @component-namespace vows {
   @c articles {
     position: relative;
-    top: 100%;
+    top: var(--top);
     z-index: 1;
 
     @d list {
