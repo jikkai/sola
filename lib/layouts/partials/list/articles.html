@@ -2,17 +2,23 @@
   <section class="vows-articles__list">
     {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
     {{ range $paginator.Pages }}
-    <article class="vows-article">
-      <header class="vows-article__header">
-        <h2 class="vows-article__header--title">
+    <article class="vows-item">
+      <header class="vows-item__header">
+        <h2 class="vows-item__header--title">
           <a href="{{ .Permalink }}">{{ .Title }}</a>
         </h2>
         <div>
-          <time>{{ .Date.Format "2006-01-02" }}</time>
-          <span>{{ .Params.categories }}</span>
+          <time>
+            <i class="fa fa-calendar"></i>
+            {{ .Date.Format "2006-01-02" }}
+          </time>
+          <span>
+            <i class="fa fa-tag"></i>
+            {{ .Params.categories }}
+          </span>
         </div>
       </header>
-      <p class="vows-article__content">
+      <p class="vows-item__content">
         {{ if eq .Description "" }}
           {{ .Summary }}
         {{ else }}

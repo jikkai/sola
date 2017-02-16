@@ -1,5 +1,8 @@
 @import "./reset.css";
 
+@import "font-awesome/css/font-awesome.min.css";
+
+
 @import "./components/cover.css";
 @import "./components/articles.css";
 @import "./components/footer.css";

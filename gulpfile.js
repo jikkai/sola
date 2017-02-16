@@ -1,3 +1,4 @@
+const path = require('path')
 const gulp = require('gulp')
 const webpack = require('webpack')
 const webpackStream = require('webpack-stream')
@@ -12,7 +13,7 @@ gulp.task('bundle', () => {
 
 gulp.task('move', () => {
   return gulp.src('./lib/**/**')
-    .pipe(gulp.dest(pkg.config.OUTPUT_PATH))
+    .pipe(gulp.dest(path.resolve(pkg.config.OUTPUT_PATH, '../')))
 })
 
 gulp.task('watch', () => {

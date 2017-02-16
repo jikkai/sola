@@ -1,0 +1,17 @@
+<article class="vows-article">
+  <header class="vows-article__header">
+    <h2 class="vows-article__header--title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+    <div>
+      <time>{{ .Date.Format "2006-01-02" }}</time>
+      <span>{{ .Params.categories }}</span>
+    </div>
+  </header>
+  <p class="vows-article__content">
+    {{ .Content }}
+  </p>
+  <p>
+    <a href="{{ .Permalink }}">继续阅读</a>
+  </p>
+</article>

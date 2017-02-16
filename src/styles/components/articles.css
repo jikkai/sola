@@ -12,11 +12,12 @@
     }
   }
 
-  @c article {
+  @c item {
     padding: 2rem 0;
 
     @d header {
       @m title {
+        margin-bottom: 1rem;
         text-align: center;
         font-size: 1.25rem;
 

@@ -11,7 +11,7 @@
     "dev": "npm run build && gulp watch"
   },
   "config": {
-    "OUTPUT_PATH": "../blog/themes/vows"
+    "OUTPUT_PATH": "../blog/themes/vows/static"
   },
   "devDependencies": {
     "css-loader": "^0.26.1",
@@ -25,7 +25,11 @@
     "style-loader": "^0.13.1",
     "ts-loader": "^2.0.0",
     "typescript": "^2.1.6",
+    "url-loader": "^0.5.7",
     "webpack": "^2.2.1",
     "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0"
   }
 }

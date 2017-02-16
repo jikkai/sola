@@ -11,8 +11,8 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, pkg.config.OUTPUT_PATH),
-    filename: 'static/[name].js',
-    publicPath: './'
+    filename: '[name].js',
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.ts', '.js', '.json'],
@@ -48,7 +48,7 @@ module.exports = {
   },
   plugins: [
     new ProgressBarPlugin(),
-    new ExtractTextPlugin('static/[name].css'),
+    new ExtractTextPlugin('[name].css'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
