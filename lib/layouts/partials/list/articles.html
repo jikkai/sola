@@ -14,6 +14,16 @@
           </time>
           <span>
             <i class="fa fa-tag"></i>
+            {{if .Params.tags }}
+            <ul>
+              {{ range .Params.tags }}
+              <li>
+                <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+              </li>
+              {{ end }}
+            </ul>
+            {{ end }}
+
             {{ .Params.categories }}
           </span>
         </div>

@@ -26,5 +26,33 @@
         font-size: 2.5rem;
       }
     }
+
+    @d footer {
+      position: absolute;
+      bottom: 5%;
+      size: 100% 5%;
+      text-align: center;
+
+      & a {
+        cursor: pointer;
+
+        & i {
+          font-size: 2.5rem;
+          animation: bounce 2s 1s infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 10%, 25%, 40%, 50% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+  30% {
+    transform: translateY(-5px);
   }
 }

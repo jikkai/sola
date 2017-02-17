@@ -15,3 +15,7 @@ html, body {
 a {
   text-decoration: none;
 }
+
+::selection {
+  background: var(--black);
+}
