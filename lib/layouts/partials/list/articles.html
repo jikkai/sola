@@ -7,38 +7,38 @@
         <h2 class="vows-item__header--title">
           <a href="{{ .Permalink }}">{{ .Title }}</a>
         </h2>
-        <div>
-          <time>
-            <i class="fa fa-calendar"></i>
-            {{ .Date.Format "2006-01-02" }}
-          </time>
-          <span>
-            <i class="fa fa-tag"></i>
-            {{if .Params.tags }}
-            <ul>
-              {{ range .Params.tags }}
-              <li>
-                <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
-              </li>
-              {{ end }}
-            </ul>
-            {{ end }}
-
-            {{ .Params.categories }}
-          </span>
-        </div>
       </header>
+
       <p class="vows-item__content">
         {{ if eq .Description "" }}
           {{ .Summary }}
         {{ else }}
           {{ .Description }}
         {{ end }}
-        ...
+        <a href="{{ .Permalink }}">»</a>
       </p>
-      <p>
-        <a href="{{ .Permalink }}">继续阅读</a>
-      </p>
+
+      <footer class="vows-item__meta">
+        <time class="vows-item__meta--date">
+          {{ .Date.Format "2006-01-02" }}
+        </time>
+
+        {{if .Params.tags }}
+        <ul class="vows-item__meta--tags">
+          {{ range .Params.tags }}
+          <li>
+            <a href="{{ "/tags/" | relURL }}{{ . | urlize }}"># {{ . }}</a>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+
+        {{if .Params.categories }}
+        <span class="vows-item__meta--categories">
+          {{ .Params.categories }}
+        </span>
+        {{ end }}
+      </footer>
     </article>
     {{ end }}
   </section>
