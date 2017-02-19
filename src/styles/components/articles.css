@@ -15,7 +15,7 @@
   @c item {
     padding: 2rem 0;
     margin: 0 4rem;
-    border-bottom: 1px solid var(--extra-light-silver);
+    border-bottom: 1px solid var(--extra-light-gray);
     @media (max-width: 500px) {
       margin: 0 1rem;
     }
@@ -27,25 +27,50 @@
         font-size: 1.5rem;
 
         & a {
-          color: var(--light-black);
+          color: var(--black);
+          transition: color .25s;
+          &:hover {
+            color: var(--extra-light-black);
+          }
         }
       }
     }
 
     @d content {
       margin-bottom: 1rem;
+      color: var(--extra-light-black);
       line-height: 1.7;
+
+      @m more {
+        width: 100%;
+        margin-top: .5rem;
+        text-align: right;
+
+        & a {
+          padding: .5rem 1rem;
+          color: var(--white) var(--light-black);
+          transition: box-shadow .25s;
+          &:hover {
+            box-shadow: inset 0 0 0 20px var(--extra-light-black);
+          }
+        }
+      }
     }
 
     @d meta {
+      color: var(--light-silver);
       font-size: .875rem;
       display: flex;
       align-items: center;
 
+      & a {
+        color: var(--light-silver);
+      }
+
       & > *:not(:last-child) {
         padding-top: .25rem;
         padding-bottom: .25rem;
-        border-right: 1px solid var(--extra-light-silver);
+        border-right: 1px solid var(--extra-light-gray);
       }
 
       @m date {
@@ -56,6 +81,12 @@
         padding-left: .5rem;
         padding-right: .5rem;
         display: flex;
+        
+        & li {
+          &:not(:last-child) {
+            margin-right: .5rem;
+          }
+        }
       }
 
       @m categories {

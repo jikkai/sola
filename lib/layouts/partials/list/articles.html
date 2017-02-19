@@ -9,14 +9,19 @@
         </h2>
       </header>
 
-      <p class="vows-item__content">
+      <div class="vows-item__content">
+        <p>
         {{ if eq .Description "" }}
-          {{ .Summary }}
+          {{ .Summary }}......
         {{ else }}
-          {{ .Description }}
+          {{ .Description }}......
         {{ end }}
-        <a href="{{ .Permalink }}">»</a>
-      </p>
+        </p>
+
+        <div class="vows-item__content--more">
+          <a href="{{ .Permalink }}">Read More</a>
+        </div>
+      </div>
 
       <footer class="vows-item__meta">
         <time class="vows-item__meta--date">
@@ -27,16 +32,16 @@
         <ul class="vows-item__meta--tags">
           {{ range .Params.tags }}
           <li>
-            <a href="{{ "/tags/" | relURL }}{{ . | urlize }}"># {{ . }}</a>
+            <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
           </li>
           {{ end }}
         </ul>
         {{ end }}
 
         {{if .Params.categories }}
-        <span class="vows-item__meta--categories">
+        <a class="vows-item__meta--categories" href="/categories/{{ .Params.categories | urlize }}">
           {{ .Params.categories }}
-        </span>
+        </a>
         {{ end }}
       </footer>
     </article>
