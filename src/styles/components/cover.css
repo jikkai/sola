@@ -5,17 +5,19 @@
     size: 100%;
     z-index: 0;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
 
     @d header {
+      height: 90%;
+      margin: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
 
       @m avatar {
-        size: 42%;
+        width: 42%;
         border-radius: 50%;
         display: block;
       }
@@ -28,9 +30,7 @@
     }
 
     @d footer {
-      position: absolute;
-      bottom: 5%;
-      size: 100% 5%;
+      size: 100% 10%;
       text-align: center;
 
       & a {

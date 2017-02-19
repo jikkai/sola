@@ -2,7 +2,7 @@
 
 @component-namespace vows {
   @c footer {
-    size: 100% 6rem;
+    size: 100% 8rem;
     text-align: center;
     display: flex;
     justify-content: center;

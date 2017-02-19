@@ -18,5 +18,5 @@ a {
 
 ::selection {
   color: var(--white);
-  background: var(--black);
+  background: var(--extra-light-black);
 }
