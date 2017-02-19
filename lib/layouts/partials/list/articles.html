@@ -9,6 +9,18 @@
         </h2>
       </header>
 
+      <footer class="vows-item__meta">
+        <time class="vows-item__meta--date">
+          {{ .Date.Format "2006-01-02" }}
+        </time>
+
+        {{if .Params.categories }}
+        <a class="vows-item__meta--categories" href="/categories/{{ .Params.categories | urlize }}">
+          {{ .Params.categories }}
+        </a>
+        {{ end }}
+      </footer>
+
       <div class="vows-item__content">
         <p>
         {{ if eq .Description "" }}
@@ -23,27 +35,17 @@
         </div>
       </div>
 
-      <footer class="vows-item__meta">
-        <time class="vows-item__meta--date">
-          {{ .Date.Format "2006-01-02" }}
-        </time>
-
-        {{if .Params.tags }}
-        <ul class="vows-item__meta--tags">
+      {{if .Params.tags }}
+      <footer class="vows-item__tags">
+        <ul>
           {{ range .Params.tags }}
           <li>
             <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
           </li>
           {{ end }}
         </ul>
-        {{ end }}
-
-        {{if .Params.categories }}
-        <a class="vows-item__meta--categories" href="/categories/{{ .Params.categories | urlize }}">
-          {{ .Params.categories }}
-        </a>
-        {{ end }}
       </footer>
+      {{ end }}
     </article>
     {{ end }}
   </section>
