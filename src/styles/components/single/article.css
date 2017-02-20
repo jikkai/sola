@@ -9,9 +9,12 @@
     @d content {
       max-width: 800px;
       margin: auto;
-      padding: 2rem 0;
+      padding: 2rem;
       color: var(--light-black);
       line-height: 1.8;
+      @media (max-width: 500px) {
+        padding: 2rem 1rem;
+      }
 
       & a {
         color: var(--extra-light-black);
@@ -20,6 +23,10 @@
         &:hover {
           color: var(--black);
         }
+      }
+
+      & pre {
+        font-size: .82rem;
       }
 
       & p, & pre, & ul, & ol, & dl,

@@ -1,4 +1,5 @@
 @import "./reset.css";
+@import "highlightjs/styles/agate.css";
 
 @import "./components/common/icons.css";
 @import "./components/common/footer.css";
