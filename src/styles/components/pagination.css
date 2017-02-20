@@ -5,9 +5,15 @@
     size: 100% 8rem;
     max-width: 800px;
     margin: auto;
+    color: var(--light-silver);
+    font-size: .875rem;
 
     & a {
-      color: var(--silver);
+      padding: .5rem 1rem;
+      border: 1px solid var(--light-silver);
+      border-radius: 4px;
+      box-sizing: border-box;
+      display: block;
     }
 
     @d list {
@@ -15,16 +21,8 @@
       padding: 0 4rem;
       box-sizing: border-box;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-
-      @m prev {
-
-      }
-
-      @m next {
-        
-      }
     }
   }
 }

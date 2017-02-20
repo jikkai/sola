@@ -43,10 +43,6 @@
       display: flex;
       align-items: center;
 
-      & a {
-        color: var(--light-silver);
-      }
-
       & > *:not(:last-child) {
         border-right: 1px solid var(--extra-light-gray);
       }

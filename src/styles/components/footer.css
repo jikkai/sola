@@ -3,13 +3,10 @@
 @component-namespace vows {
   @c footer {
     size: 100% 8rem;
+    color: var(--white);
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    & a {
-      color: var(--white);
-    }
   }
 }

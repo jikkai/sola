@@ -1,20 +1,25 @@
 {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
 <nav class="vows-pagination">
   <ul class="vows-pagination__list">
-    {{ if .Paginator.HasPrev }}
-    <li class="vows-pagination__prev">
+    <li>
+      {{ if .Paginator.HasPrev }}
       <a href="{{ .Site.BaseURL }}{{ .Paginator.Prev.URL }}">
         ← Newer Posts
       </a>
+      {{ end }}
     </li>
-    {{ end }}
-    {{ if .Paginator.HasNext }}
-    <li class="vows-pagination__next">
+
+    <li>
+      Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
+    </li>
+
+    <li>
+      {{ if .Paginator.HasNext }}
       <a href="{{ .Site.BaseURL }}{{ .Paginator.Next.URL }}">
         Older Posts →
       </a>
+      {{ end }}
     </li>
-    {{ end }}
   </ul>
 </nav>
 {{ end }}
