@@ -2,41 +2,41 @@
   <section class="vows-articles__list">
     {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
     {{ range $paginator.Pages }}
-    <article class="vows-item">
-      <header class="vows-item__header">
-        <h2 class="vows-item__header--title">
+    <article class="vows-items">
+      <header class="vows-items__header">
+        <h2 class="vows-items__header--title">
           <a href="{{ .Permalink }}">{{ .Title }}</a>
         </h2>
       </header>
 
-      <footer class="vows-item__meta">
-        <time class="vows-item__meta--date">
+      <section class="vows-items__meta">
+        <time class="vows-items__meta--date">
           {{ .Date.Format "2006-01-02" }}
         </time>
 
         {{if .Params.categories }}
-        <a class="vows-item__meta--categories" href="/categories/{{ .Params.categories | urlize }}">
+        <a class="vows-items__meta--categories" href="/categories/{{ .Params.categories | urlize }}">
           {{ .Params.categories }}
         </a>
         {{ end }}
-      </footer>
+      </section>
 
-      <div class="vows-item__content">
-        <p>
+      <div class="vows-items__content">
+        <section>
         {{ if eq .Description "" }}
           {{ .Summary }}......
         {{ else }}
           {{ .Description }}......
         {{ end }}
-        </p>
+        </section>
 
-        <div class="vows-item__content--more">
+        <div class="vows-items__content--more">
           <a href="{{ .Permalink }}">Read More</a>
         </div>
       </div>
 
       {{if .Params.tags }}
-      <footer class="vows-item__tags">
+      <footer class="vows-items__tags">
         <ul>
           {{ range .Params.tags }}
           <li>
@@ -49,5 +49,5 @@
     </article>
     {{ end }}
   </section>
-  {{ partial "common/pagination.html" . }}
+  {{ partial "list/pagination.html" . }}
 </div>

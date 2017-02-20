@@ -1,4 +1,4 @@
-@import "../var.css";
+@import "../../var.css";
 
 @component-namespace vows {
   @c articles {
@@ -12,7 +12,7 @@
     }
   }
 
-  @c item {
+  @c items {
     padding: 2rem 0;
     margin: 0 4rem;
     border-bottom: 1px solid var(--extra-light-gray);
@@ -53,6 +53,16 @@
 
       @m categories {
         padding-left: .5rem;
+        padding-right: .5rem;
+      }
+
+      @m tags {
+        padding-left: .5rem;
+        display: flex;
+
+        & li {
+          margin-right: .5rem;
+        }
       }
     }
 

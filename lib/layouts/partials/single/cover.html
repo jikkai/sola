@@ -1,0 +1,34 @@
+<section class="vows-cover">
+  <header class="vows-cover__header">
+    <img class="vows-cover__header--avatar" src="/avatar.png" draggable="false" />
+    <a href="{{ .Site.BaseURL }}">
+      <h1 class="vows-cover__header--title">{{ .Site.Title }}</h1>
+    </a>
+  </header>
+
+  <section class="vows-cover__content">
+    <h1 class="vows-cover__content--title">{{ .Title }}</h1>
+
+    <div class="vows-item__meta">
+      <time class="vows-item__meta--date">
+        {{ .Date.Format "2006-01-02" }}
+      </time>
+
+      {{if .Params.categories }}
+      <a class="vows-item__meta--categories" href="/categories/{{ .Params.categories | urlize }}">
+        {{ .Params.categories }}
+      </a>
+      {{ end }}
+
+      {{if .Params.tags }}
+      <ul class="vows-item__meta--tags">
+        {{ range .Params.tags }}
+        <li>
+          <a href="/tags/{{ . | urlize }}">#{{ . }}</a>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
+  </section>
+</section>

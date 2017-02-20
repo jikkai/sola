@@ -1,4 +1,4 @@
-@import "../var.css";
+@import "../../var.css";
 
 @component-namespace vows {
   @c pagination {
@@ -8,14 +8,6 @@
     color: var(--light-silver);
     font-size: .875rem;
 
-    & a {
-      padding: .5rem 1rem;
-      border: 1px solid var(--light-silver);
-      border-radius: 4px;
-      box-sizing: border-box;
-      display: block;
-    }
-
     @d list {
       size: 100%;
       padding: 0 4rem;
@@ -23,6 +15,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      & li {
+        size: 8rem 2.125rem;
+        line-height: 2.125rem;
+
+        & a {
+          size: 100%;
+          text-align: center;
+          border: 1px solid var(--light-silver);
+          border-radius: 4px;
+          box-sizing: border-box;
+          display: block;
+        }
+      }
     }
   }
 }

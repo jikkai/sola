@@ -1,7 +1,11 @@
 @import "./reset.css";
 
-@import "./components/icons.css";
-@import "./components/cover.css";
-@import "./components/articles.css";
-@import "./components/pagination.css";
-@import "./components/footer.css";
+@import "./components/common/icons.css";
+@import "./components/common/footer.css";
+
+@import "./components/list/jumbotron.css";
+@import "./components/list/articles.css";
+@import "./components/list/pagination.css";
+
+@import "./components/single/cover.css";
+@import "./components/single/article.css";

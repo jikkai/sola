@@ -1,0 +1,40 @@
+@import "../../var.css";
+
+@component-namespace vows {
+  @c cover {
+    size: 100% 20rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    @d header {
+      size: 100% 4rem;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+
+      @m avatar {
+        size: 2rem;
+        border-radius: 50%;
+      }
+
+      @m title {
+        margin-left: .5rem;
+        font-size: 1.2rem;
+        font-family: "Nixie One", cursive;
+      }
+    }
+
+    @d content {
+      height: calc(100% - 4rem);
+      @m title {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  @c item {
+
+  }
+}

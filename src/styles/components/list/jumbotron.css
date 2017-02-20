@@ -1,7 +1,7 @@
-@import "../var.css";
+@import "../../var.css";
 
 @component-namespace vows {
-  @c cover {
+  @c jumbotron {
     size: 100%;
     z-index: 0;
     display: flex;
@@ -15,6 +15,13 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      & a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
       @m avatar {
         width: 42%;

@@ -1,0 +1,91 @@
+@import "../../var.css";
+
+@component-namespace vows {
+  @c article {
+    width: 100%;
+    color: var(--black) var(--white);
+    box-sizing: border-box;
+
+    @d content {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem 0;
+      color: var(--light-black);
+      line-height: 1.8;
+
+      & a {
+        color: var(--extra-light-black);
+        border-bottom: 1px solid var(--extra-light-silver);
+        transition: color .25s;
+        &:hover {
+          color: var(--black);
+        }
+      }
+
+      & p, & pre, & ul, & ol, & dl,
+      & form, & hr, & table, & blockquote {
+        margin-bottom: 1.2rem
+      }
+
+      & h1, & h2, & h3, & h4, & h5, & h6  {
+        margin-top: 1.2rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.35;
+      }
+
+      & h1 {
+        font-size: 2rem;
+      }
+
+      & h2 {
+        font-size: 1.8rem;
+      }
+
+      & h3 {
+        font-size: 1.6rem;
+      }
+
+      & h4 {
+        font-size: 1.4rem;
+      }
+
+      & h5, & h6 {
+        font-size: 1.2rem;
+      }
+
+      & ul {
+        margin-left: 1.3rem;
+        list-style: disc;
+      }
+
+      & ol {
+        list-style: decimal;
+        margin-left: 1.9rem;
+      }
+
+      & li ul,
+      & li ol {
+        margin-bottom: 0.8rem;
+        margin-left: 2rem;
+      }
+
+      & li ul {
+        list-style: circle;
+      }
+
+      & em,
+      & legend,
+      & caption {
+        color: var(--black);
+        font-weight: inherit;
+      }
+
+      & img {
+        max-width: 80%;
+        margin: auto;
+        display: block;
+        -webkit-user-drag: none;
+      }
+    }
+  }
+}
