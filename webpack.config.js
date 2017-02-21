@@ -7,7 +7,11 @@ const pkg = require('./package.json')
 
 module.exports = {
   entry: {
-    app: './src/index.ts'
+    app: './src/index.ts',
+    vendor: [
+      'highlightjs',
+      'smoothscroll-polyfill'
+    ]
   },
   output: {
     path: path.join(__dirname, pkg.config.OUTPUT_PATH),
@@ -49,6 +53,10 @@ module.exports = {
   plugins: [
     new ProgressBarPlugin(),
     new ExtractTextPlugin('[name].css'),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'vendor.js'
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),

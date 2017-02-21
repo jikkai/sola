@@ -16,19 +16,6 @@
         padding: 2rem 1rem;
       }
 
-      & a {
-        color: var(--extra-light-black);
-        border-bottom: 1px solid var(--extra-light-silver);
-        transition: color .25s;
-        &:hover {
-          color: var(--black);
-        }
-      }
-
-      & pre {
-        font-size: .82rem;
-      }
-
       & p, & pre, & ul, & ol, & dl,
       & form, & hr, & table, & blockquote {
         margin-bottom: 1.2rem
@@ -85,6 +72,33 @@
       & caption {
         color: var(--black);
         font-weight: inherit;
+      }
+
+      & a {
+        color: var(--extra-light-black);
+        border-bottom: 1px solid var(--extra-light-silver);
+        transition: color .25s;
+        &:hover {
+          color: var(--black);
+        }
+      }
+
+      & pre {
+        font-size: .82rem;
+      }
+
+      & p > code {
+        padding: 1px 4px;
+        color: var(--dark-blue) var(--dark-white);
+        font-size: .875rem;
+        border-radius: 2px;
+      }
+
+      & blockquote {
+        margin-left: -2rem;
+        padding-left: 1.75rem;
+        border-left: var(--light-black) 4px solid;
+        box-sizing: border-box;
       }
 
       & img {
