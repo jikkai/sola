@@ -17,9 +17,11 @@ gulp.task('move', () => {
 })
 
 gulp.task('watch', () => {
-  const watcher = gulp.watch(['./src/**/*', './lib/**/*'], ['bundle', 'move'])
+  gulp.watch(['./src/**/*'], ['bundle']).on('change', (event) => {
+    console.log(`File ${event.path} was ${event.type}, running tasks...`)
+  })
 
-  watcher.on('change', (event) => {
+  gulp.watch(['./lib/**/*'], ['move']).on('change', (event) => {
     console.log(`File ${event.path} was ${event.type}, running tasks...`)
   })
 })

@@ -15,6 +15,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media (max-width: 500px) {
+        padding: 0 1rem;
+      }
 
       & li {
         size: 8rem 2.125rem;
@@ -27,6 +30,17 @@
           border-radius: 4px;
           box-sizing: border-box;
           display: block;
+          transition: all .25s;
+          &:hover {
+            color: var(--silver);
+            border-color: var(--silver);
+          }
+        }
+      }
+
+      @m page {
+        @media (max-width: 500px) {
+          display: none;
         }
       }
     }

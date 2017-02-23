@@ -3,41 +3,56 @@
 @component-namespace vows {
   @c jumbotron {
     size: 100%;
-    z-index: 0;
+    padding: 0 2rem;
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+
+    @d nav {
+      size: 100% 4rem;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+
+      @m left {
+        display: flex;
+        align-items: center;
+
+        & img {
+          size: 2rem;
+          border-radius: 50%;
+        }
+
+        & span {
+          margin-left: .5rem;
+          font-size: 1.2rem;
+          font-family: "Nixie One", cursive;
+        }
+      }
+    }
 
     @d header {
-      height: 90%;
-      margin: auto;
+      size: 100% calc(100% - 8rem);
+      text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-
-      & a {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      @m avatar {
-        width: 42%;
-        border-radius: 50%;
-        display: block;
-      }
 
       @m title {
         margin: 1rem 0;
-        font-family: "Nixie One", cursive;
         font-size: 2.5rem;
+        font-family: "Nixie One", cursive;
+      }
+
+      @m desc {
+        margin: .5rem 0;
+        font-size: 1.25rem;
+        font-family: "Nixie One", cursive;
       }
     }
 
     @d footer {
-      size: 100% 10%;
+      size: 100% 4rem;
       text-align: center;
 
       & a {

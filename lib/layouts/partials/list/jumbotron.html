@@ -1,9 +1,14 @@
 <section class="vows-jumbotron">
-  <header class="vows-jumbotron__header">
-    <a href="{{ .Site.BaseURL }}">
-      <img class="vows-jumbotron__header--avatar" src="/avatar.png" draggable="false" />
-      <h1 class="vows-jumbotron__header--title">{{ .Site.Title }}</h1>
+  <nav class="vows-jumbotron__nav">
+    <a class="vows-jumbotron__nav--left" href="{{ .Site.BaseURL }}">
+      <img src="/avatar.png" draggable="false" />
+      <span>{{ .Site.Title }}</span>
     </a>
+  </nav>
+
+  <header class="vows-jumbotron__header">
+    <h1 class="vows-jumbotron__header--title">{{ .Site.Title }}</h1>
+    <p class="vows-jumbotron__header--desc">{{ .Site.Params.Description }}</p>
   </header>
 
   <footer class="vows-jumbotron__footer">
