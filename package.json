@@ -1,6 +1,6 @@
 {
   "name": "vows",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Yet another blog theme for Hugo",
   "main": "index.js",
   "author": "Jiikai Xiao <sonne@asaki.me>",

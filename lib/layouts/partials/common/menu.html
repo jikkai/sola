@@ -8,3 +8,20 @@
     <i class="vows-icon menu"></i>MENU
   </a>
 </nav>
+
+<aside id="v-menu" class="vows-dialog">
+  <header class="vows-dialog__header">
+    <a id="v-closemenu" class="vows-dialog__header--close">
+      <i class="vows-icon close"></i>MENU
+    </a>
+  </header>
+
+  <section class="vows-dialog__body">
+    {{ range .Site.Params.links }}
+    <a class="vows-dialog__body--block" href="{{ .link }}" target="_blank">
+      <h3>{{ .name }}</h3>
+      <p>{{ .desc }}</p>
+    </a>
+    {{ end }}
+  </section>
+</aside>

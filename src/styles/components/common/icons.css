@@ -12,5 +12,8 @@
     &.menu {
       background-image: var(--menu);
     }
+    &.close {
+      background-image: var(--close);
+    }
   }
 }
