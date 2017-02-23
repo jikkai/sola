@@ -1,10 +1,5 @@
 <section class="vows-jumbotron">
-  <nav class="vows-jumbotron__nav">
-    <a class="vows-jumbotron__nav--left" href="{{ .Site.BaseURL }}">
-      <img src="/avatar.png" draggable="false" />
-      <span>{{ .Site.Title }}</span>
-    </a>
-  </nav>
+  {{ partial "common/menu.html" . }}
 
   <header class="vows-jumbotron__header">
     <h1 class="vows-jumbotron__header--title">{{ .Site.Title }}</h1>
@@ -12,7 +7,7 @@
   </header>
 
   <footer class="vows-jumbotron__footer">
-    <a id="scroll-down">
+    <a id="v-scrolldown">
       <i class="vows-icon down" aria-hidden="true"></i>
     </a>
   </footer>

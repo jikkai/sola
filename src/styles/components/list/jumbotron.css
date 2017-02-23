@@ -8,29 +8,6 @@
     display: flex;
     flex-wrap: wrap;
 
-    @d nav {
-      size: 100% 4rem;
-      display: flex;
-      align-items: center;
-      box-sizing: border-box;
-
-      @m left {
-        display: flex;
-        align-items: center;
-
-        & img {
-          size: 2rem;
-          border-radius: 50%;
-        }
-
-        & span {
-          margin-left: .5rem;
-          font-size: 1.2rem;
-          font-family: "Nixie One", cursive;
-        }
-      }
-    }
-
     @d header {
       size: 100% calc(100% - 8rem);
       text-align: center;

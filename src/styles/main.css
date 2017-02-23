@@ -3,6 +3,7 @@
 
 @import "./components/common/icons.css";
 @import "./components/common/footer.css";
+@import "./components/common/menu.css";
 
 @import "./components/list/jumbotron.css";
 @import "./components/list/articles.css";

@@ -1,10 +1,5 @@
 <section class="vows-cover">
-  <header class="vows-cover__header">
-    <img class="vows-cover__header--avatar" src="/avatar.png" draggable="false" />
-    <a href="{{ .Site.BaseURL }}">
-      <h1 class="vows-cover__header--title">{{ .Site.Title }}</h1>
-    </a>
-  </header>
+  {{ partial "common/menu.html" . }}
 
   <section class="vows-cover__content">
     <h1 class="vows-cover__content--title">{{ .Title }}</h1>

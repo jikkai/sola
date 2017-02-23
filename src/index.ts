@@ -5,7 +5,7 @@ import './styles/main.css'
 // smoothscroll
 smoothscroll.polyfill()
 
-const scrollDownEl = document.getElementById('scroll-down')
+const scrollDownEl = document.getElementById('v-scrolldown')
 if (scrollDownEl) {
   scrollDownEl.onclick = () => {
     const height = document.body.clientHeight - document.body.scrollTop

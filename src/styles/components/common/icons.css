@@ -9,5 +9,8 @@
     &.down {
       background-image: var(--down);
     }
+    &.menu {
+      background-image: var(--menu);
+    }
   }
 }

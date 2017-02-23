@@ -1,0 +1,41 @@
+@import "../../var.css";
+
+@component-namespace vows {
+  @c menu {
+    size: 100% 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    @d left {
+      display: flex;
+      align-items: center;
+
+      & img {
+        size: 2rem;
+        border-radius: 50%;
+      }
+
+      & span {
+        margin-left: .5rem;
+        font-size: 1.2rem;
+        font-family: "Nixie One", cursive;
+      }
+    }
+
+    @d right {
+      padding: .625rem 1rem;
+      border: 1px solid var(--white);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+
+      & i {
+        size: 1rem;
+        margin-right: .5rem;
+      }
+    }
+  }
+}
+    
