@@ -3,7 +3,7 @@
   <ul class="vows-pagination__list">
     <li>
       {{ if .Paginator.HasPrev }}
-      <a href="{{ .Site.BaseURL }}{{ .Paginator.Prev.URL }}">
+      <a href="{{ .Paginator.Prev.URL }}">
         ← Newer Posts
       </a>
       {{ end }}
@@ -15,7 +15,7 @@
 
     <li>
       {{ if .Paginator.HasNext }}
-      <a href="{{ .Site.BaseURL }}{{ .Paginator.Next.URL }}">
+      <a href="{{ .Paginator.Next.URL }}">
         Older Posts →
       </a>
       {{ end }}
