@@ -43,16 +43,16 @@
   }
 
   @c dialog {
-    position: fixed -100% 0 0 0;
+    position: fixed 0 0 0 0;
     size: 100%;
     padding: 0 2rem;
     background: rgba(0, 0, 0, .75);
     z-index: 10;
     box-sizing: border-box;
     overflow: auto;
-    transition: top .25s;
+    display: none;
     &.active {
-      top: 0;
+      display: block;
     }
 
     @d header {
