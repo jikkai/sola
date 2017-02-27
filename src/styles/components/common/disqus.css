@@ -1,0 +1,21 @@
+@import "../../var.css";
+
+@component-namespace vows {
+  @c disqus {
+    width: 100%;
+    color: var(--black) var(--white);
+    box-sizing: border-box;
+
+    @d content {
+      max-width: 800px;
+      margin: auto;
+      padding: 0 2rem 2rem 2rem;
+      color: var(--light-black);
+      line-height: 1.8;
+      border-top: 1px solid var(--dark-white);
+      @media (max-width: 500px) {
+        padding: 0 1rem 2rem 1rem;
+      }
+    }
+  }
+}
