@@ -1,21 +1,17 @@
-import { addClass, removeClass } from './utils/dom'
+import { hasClass, addClass, removeClass } from './utils/dom'
 
 export default () => {
   const openbtnEl = document.getElementById('v-openmenu')
-  const closebtnEl = document.getElementById('v-closemenu')
   const menuEl = document.getElementById('v-menu')
   if (openbtnEl && menuEl) {
     openbtnEl.onclick = () => {
-      addClass(menuEl, 'active')
-      addClass(openbtnEl, 'hide')
-      addClass(document.body, 'fixed')
-    }
-  }
-  if (closebtnEl && menuEl) {
-    closebtnEl.onclick = () => {
-      removeClass(menuEl, 'active')
-      removeClass(openbtnEl, 'hide')
-      removeClass(document.body, 'fixed')
+      if (hasClass(menuEl, 'active')) {
+        removeClass(menuEl, 'active')
+        removeClass(document.body, 'active')
+      } else {
+        addClass(menuEl, 'active')
+        addClass(document.body, 'active')
+      }
     }
   }
 }

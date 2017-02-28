@@ -1,27 +1,20 @@
-<nav class="vows-menu">
-  <a class="vows-menu__left" href="{{ .Site.BaseURL }}">
+<aside id="v-menu" class="vows-menu">
+  <ul class="vows-menu__body">
+    {{ range .Site.Params.links }}
+    <li>
+      <a href="{{ .link }}" title="{{ .desc }}">{{ .name }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</aside>
+
+<nav class="vows-menu-btn">
+  <a class="vows-menu-btn__left" href="{{ .Site.BaseURL }}">
     <img src="/avatar.png" draggable="false" />
     <span>{{ .Site.Title }}</span>
   </a>
 
-  <a id="v-openmenu" class="vows-menu__right">
+  <a id="v-openmenu" class="vows-menu-btn__right">
     <i class="vows-icon menu"></i>MENU
   </a>
 </nav>
-
-<aside id="v-menu" class="vows-dialog">
-  <header class="vows-dialog__header">
-    <a id="v-closemenu" class="vows-dialog__header--close">
-      <i class="vows-icon close"></i>MENU
-    </a>
-  </header>
-
-  <section class="vows-dialog__body">
-    {{ range .Site.Params.links }}
-    <a class="vows-dialog__body--block" href="{{ .link }}" target="_blank">
-      <h3>{{ .name }}</h3>
-      <p>{{ .desc }}</p>
-    </a>
-    {{ end }}
-  </section>
-</aside>

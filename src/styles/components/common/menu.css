@@ -1,7 +1,7 @@
 @import "../../var.css";
 
 @component-namespace vows {
-  @c menu {
+  @c menu-btn {
     size: 100% 4rem;
     display: flex;
     justify-content: space-between;
@@ -31,8 +31,9 @@
       border-radius: 4px;
       display: flex;
       align-items: center;
-      &.hide {
-        display: none;
+      transition: background .25s;
+      &:hover {
+        background: rgba(255, 255, 255, .2);
       }
 
       & i {
@@ -42,67 +43,39 @@
     }
   }
 
-  @c dialog {
-    position: fixed 0 0 0 0;
-    size: 100%;
+  @c menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    size: 100% 4rem;
     padding: 0 2rem;
-    background: rgba(0, 0, 0, .75);
-    z-index: 10;
+    color: var(--white) rgba(0, 0, 0, .25);
     box-sizing: border-box;
     overflow: auto;
-    display: none;
+    transform: translateY(-4rem);
+    transition: transform 0.25s, visibility 0.25s;
+    visibility: hidden;
     &.active {
-      display: block;
-    }
-
-    @d header {
-      size: 100% 4rem;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      box-sizing: border-box;
-
-      @m close {
-        padding: .625rem .875rem;
-        font-size: .875rem;
-        border: 1px solid var(--white);
-        border-radius: 4px;
-        display: flex;
-        align-items: center;
-
-        & i {
-          size: .875rem;
-          margin-right: .5rem;
-        }
-      }
+      visibility: visible;
+      transform: translateY(0);
     }
 
     @d body {
-      padding: 1rem 0;
-      box-sizing: border-box;
+      size: 100%;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: flex-end;
+      align-items: center;
 
-      @m block {
-        size: 40% 8rem;
-        margin-bottom: 2rem;
-        text-align: center;
-        border: 1px solid var(--white);
-        border-radius: 4px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        transition: background .25s;
-        &:hover {
-          background: rgba(255, 255, 255, .2);
-        }
-        @media (max-width: 500px) {
-          width: 80%;
-        }
-
-        & h3 {
-          margin: .25rem;
+      & li {
+        & a {
+          height: 4rem;
+          padding: 0 1rem;
+          line-height: 4rem;
+          display: block;
+          transition: background .25s;
+          &:hover {
+            background: rgba(255, 255, 255, .2);
+          }
         }
       }
     }
